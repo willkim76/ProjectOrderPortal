@@ -1,0 +1,50 @@
+[
+  {
+    "itemId": "E1",
+    "name": "Juicy Cheeseburger",
+    "price": 550,
+    "description": "The original, award winning Juicy Cheeseburger"
+  },
+  {
+    "itemId": "E2",
+    "name": "Juicy Bacon Cheeseburger",
+    "price": 750,
+    "description": "Our award winning Juicy Cheeseburger with something extra"
+  },
+  {
+    "itemId": "S1",
+    "name": "Small Matchstick Fries",
+    "price": 250,
+    "description": "Small portion of our all natural straight cut fries"
+  },
+  {
+    "itemId": "S2",
+    "name": "Large Matchstick Fries",
+    "price": 350,
+    "description": "Standard portion of our all natural straight cut fries"
+  },
+  {
+    "itemId": "B1",
+    "name": "Pepsi",
+    "price": 150,
+    "description": "A dark citrusy flavored carbonated soda"
+  },
+  {
+    "itemId": "B2",
+    "name": "Sprite",
+    "price": 150,
+    "description": "A light lemon lime flavored carbonated soda"
+  },
+  {
+    "itemId": "E3",
+    "name": "3 Piece Chicken Nuggets",
+    "price": 400,
+    "description": "3 of our all naturally sourced chicken breast meat nuggets"
+  },
+  {
+    "itemId": "E4",
+    "name": "5 Piece Chicken Nuggets",
+    "price": 550,
+    "description": "5 of our all naturally sourced chicken breast meat nuggets"
+  }
+]

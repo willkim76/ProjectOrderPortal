@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/admin.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Juicy^3 Burgers! [admin]</title>
+    <style>
+        textarea {
+          width: 100%;
+          height: 85%;
+          resize: none;
+        }
+        fieldset {
+          height: 250px;
+          width: 500px;
+          overflow-y:auto;
+        }
+        #orderInfo {
+          overflow-y: scroll;
+        }
+        #editorButtons {
+          display: flex;
+          justify-content: space-between;
+        }
+        .radioDiv:hover {
+          background-color: #ffff99;
+        }
+        .radioDiv input[type="radio"]:checked+label {
+          background-color: #ffff99;
+        }
+        label {
+          display: inline-block;
+          width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="dateDiv">
+        <input type="date" id="lookupDate">
+        <button type="button" id="lookupDateBtn" onclick="getOrders(lookupDate)">Get Orders</button>
+    </div>
+    <fieldset id="orderInfo">
+    </fieldset>
+    <br>
+    <fieldset id="orderEdit" disabled>
+            <legend id="orderLegend">Order Id</legend>
+            <textarea id="editingOrder"></textarea>
+        <div id="editorButtons">
+            <button type="button" id="editSave">Save Order</button>
+            <button type="button" id="editDelete">Delete Order</button>
+        </div>
+    </fieldset>
+
+</body>
+</html>

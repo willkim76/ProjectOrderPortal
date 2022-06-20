@@ -1,0 +1,26 @@
+[
+  {
+    "itemId": "MenuItem1Id",
+    "name": "MenuItem1Name",
+    "price": 100,
+    "description": "MenuItem1Description"
+  },
+  {
+    "itemId": "MenuItem2Id",
+    "name": "MenuItem2Name",
+    "price": 200,
+    "description": "MenuItem2Description"
+  },
+  {
+    "itemId": "MenuItem3Id",
+    "name": "MenuItem3Name",
+    "price": 300,
+    "description": "MenuItem3Description"
+  },
+  {
+    "itemId": "MenuItem4Id",
+    "name": "MenuItem4Name",
+    "price": 400,
+    "description": "MenuItem4Description"
+  }
+]

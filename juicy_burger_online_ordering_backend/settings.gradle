@@ -1,0 +1,3 @@
+rootProject.name = 'juicy_burger_online_ordering_backend'
+include 'main'
+

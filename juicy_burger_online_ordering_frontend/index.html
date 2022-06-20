@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Juicy Juicy Juicy Burgers!</title>
+</head>
+<body>
+    <div id="overlayDiv" class="overlay">
+        <div class="loader"></div>
+    </div>
+    <div>
+        <img src="images/Logo.png">
+    </div>
+    <h2>MENU</h2>
+    <div id="menudiv"></div>
+    <h2>CART</h2>
+    <div id="cartdiv" class="shopping-cart">
+        <div class="column-labels">
+            <label class="item-image">Image</label>
+            <label class="item-name">Name</label>
+            <label class="item-description">Description</label>
+            <label class="item-price">Price</label>
+            <label class="item-quantity">Quantity</label>
+            <label class="item-total">Total</label>
+        </div>
+        <div id="cartitems"></div>
+        <div class="totals">
+            <div class="totals-item">
+                <label>Subtotal</label>
+                <div id="cart-subtotal" class="totals-value">0.00</div>
+            </div>
+            <div class="totals-item">
+                <label>Tax (5%)</label>
+                <div id="cart-tax" class="totals-value">0.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>Grand Total</label>
+                <div id="cart-total" class="totals-value">0.00</div>
+            </div>
+        </div>
+        <button id="checkout-button" class="btn" role="button" onclick="checkout()">Checkout</button>
+    </div>
+</body>
+</html>

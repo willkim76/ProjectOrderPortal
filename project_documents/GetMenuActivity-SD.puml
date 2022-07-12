@@ -1,0 +1,33 @@
+@startuml
+actor "Client" as client
+participant "API Gateway/Lambda" as apiGateway
+participant "GetMenuActivity" as getMenuActivity
+participant "MenuDao" as MenuDao
+database "DynamoDB" as dynamoDB
+
+title Get Menu for Customer
+
+client -> apiGateway : HTTP Request
+
+activate apiGateway
+apiGateway -> getMenuActivity : GetMenuRequest
+
+activate getMenuActivity
+getMenuActivity -> MenuDao : getMenu
+
+activate MenuDao
+MenuDao -> dynamoDB : getMenu
+
+activate dynamoDB
+dynamoDB -> MenuDao : return menu data
+deactivate dynamoDB
+
+MenuDao -> getMenuActivity : Menu
+deactivate MenuDao
+
+getMenuActivity -> apiGateway : Menu
+deactivate getMenuActivity
+
+apiGateway -> client : Menu
+deactivate apiGateway
+@enduml

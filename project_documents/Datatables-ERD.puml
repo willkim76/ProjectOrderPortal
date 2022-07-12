@@ -1,0 +1,20 @@
+@startuml
+
+title Entity Relationship Diagram
+entity Order {
+  * orderId: String
+  ..
+  * customerName: String
+  --
+  * menuItems: List<String>
+}
+
+entity MenuItems {
+  * menuItemName: String
+  --
+  * price: Integer
+  * description: String
+}
+
+Order "1 " --{ "1..*" MenuItems
+@enduml

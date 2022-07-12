@@ -38,7 +38,7 @@ These resources may be helpful as you fill out your team charter. They are optio
 |Team Member (a) |  Will Kim - Slack/Discord                    |
 |Team Member (b) |  William Gibson - Slack/Discord              |
 |Team Member (c) |  Lucas Elia - Slack/Discord                  |
-|Team Member (d) |                                              |
+|Team Member (d) |  Casey Jones - Slack/Discord                 |
 
 ### Psychological safety
 
@@ -90,7 +90,7 @@ becoming an software engineer?**
 * *Team member name*: Will Kim - Learning how to be a effective software engineer through technical knowledge or soft skills.
 * *Team member name*: William Gibson - Learning important and marketable skill for his future.
 * *Team member name*: Lucas Elia - Gaining knowledge and skills that lead to a fullfilling career. 
-* *Team member name*:
+* *Team member name*: Casey Jones - Filling in foundational gaps in knowledge as a developer.
 
 **What each team member wants to achieve: e.g. improve analytical skills, learn
 project management skills, develop public speaking skills, speak up more, speak
@@ -99,7 +99,7 @@ up less, etc.**
 * *Team member name*: Will Kim - Team leadership/Effective leadership qualities.
 * *Team member name*: William Gibson - Knowledge in wide breadth of programming languages and skills.
 * *Team member name*: Lucas Elia - Technical skills/Leadership skills.
-* *Team member name*:
+* *Team member name*: Casey Jones - Technical teamwork.
 
 ## Team Member Roles and Responsibilities
 
@@ -122,4 +122,4 @@ rotating or permanent roles as you go.*
 * Team member (a) Name & Date: Will Kim 03/07/22
 * Team member (b) Name & Date: William Gibson 03/07/22
 * Team member (c) Name & Date: Lucas Elia 03/07/22
-* Team member (d) Name & Date:
+* Team member (d) Name & Date: Casey Jones 03/09/22

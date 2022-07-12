@@ -1,0 +1,41 @@
+@startuml
+actor "Client" as client
+participant "API Gateway/Lambda" as apiGateway
+participant "GetOrderActivity" as getOrderActivity
+participant "OrderDao" as OrderDao
+database "DynamoDB" as dynamoDB
+
+title Get Order Activity
+
+client -> apiGateway : HTTP Request
+
+activate apiGateway
+apiGateway -> getOrderActivity : GetOrderRequest
+
+activate getOrderActivity
+getOrderActivity -> OrderDao : getOrder(orderId)
+
+activate OrderDao
+OrderDao -> dynamoDB : load(orderId)
+
+activate dynamoDB
+alt if (orderId) is invalid
+dynamoDB --> OrderDao : null
+OrderDao --> getOrderActivity : throw OrderDoesNotExistException
+getOrderActivity --> apiGateway : throw OrderDoesNotExistException
+apiGateway --> client : Response Code 400
+else else continue
+end
+
+dynamoDB --> OrderDao : Order data
+deactivate dynamoDB
+
+OrderDao --> getOrderActivity : Order
+deactivate OrderDao
+
+getOrderActivity --> apiGateway : GetOrderResponse
+deactivate getOrderActivity
+
+apiGateway --> client : Response Code 200
+deactivate apiGateway
+@enduml

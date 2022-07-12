@@ -1,0 +1,18 @@
+@startuml
+
+title Exception Hierarchy
+
+class OrderDoesNotExistException {
+- {static} long serialVersionUID
+}
+class OrderException {
+- {static} long serialVersionUID
+}
+class InvalidOrderException {
+- {static} long serialVersionUID
+}
+
+RuntimeException <|-- OrderException
+OrderException <|-- InvalidOrderException
+OrderException <|-- OrderDoesNotExistException
+@enduml

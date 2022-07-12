@@ -1,0 +1,92 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+title Public Models
+
+Interface MenuItem
+Interface Entree
+Interface Side
+Interface Drink
+
+Class Hamburger
+Class ChickenWings
+Class FrenchFries
+Class PotatoChips
+Class Coke
+Class Water
+
+
+MenuItem <-- Entree
+MenuItem <-- Side
+MenuItem <-- Drink
+
+
+Entree <-- Hamburger
+Entree <--ChickenWings
+Side <-- FrenchFries
+Side <-- PotatoChips
+Drink <-- Coke
+Drink <-- Water
+
+'DynamoDbTable holds each menu item as a key/value map pair with
+'the key being the MenuItem and the value being the specific price
+
+Class Order
+
+'newpage
+'
+'Class CreateOrderRequest {
+'-Order
+'-customerId
+'}
+'
+'
+'Class OrderDao {
+'- DynamoDbMapper
+'createOrder(Order)
+'getOrder(orderId)
+'updateOrder(orderId, Order)
+'deleteOrder(orderId)
+'}
+'
+'
+'newpage
+'title activities
+'
+'Class CreateOrderActivity{
+'-MenuItem
+'}
+
+
+
+
+
+
+
+
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+@enduml

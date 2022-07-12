@@ -1,0 +1,114 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Order API",
+    "version": "0.0.1"
+  },
+  "paths": {
+    "/admin": {
+      "delete": {
+        "summary": "Deletes an order",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "description": "Order Id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          }
+        }
+      },
+      "get": {
+        "summary": "Gets the orders/sales for a date",
+        "parameters": [
+          {
+            "name": "salesForDate",
+            "in": "query",
+            "description": "Sales For Date",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          }
+        }
+      }
+    },
+    "/orders": {
+      "get": {
+        "summary": "Creates a list of orders for a date",
+        "parameters": [
+          {
+            "name": "salesForDate",
+            "in": "query",
+            "description": "Sales For Date",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          },
+          "404": {
+            "description": "Order does not exist!"
+          }
+        }
+      },
+      "post": {
+        "summary": "Posts an order",
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "500": {
+            "description": "Could not save to DynamoDB!"
+          }
+        }
+      },
+      "put": {
+        "summary": "Updates an order",
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          },
+          "400": {
+            "description": "Bad request!"
+          },
+          "404": {
+            "description": "Order does not exist!"
+          },
+          "500": {
+            "description": "Could not save to DynamoBD!"
+          }
+        }
+      }
+    }
+  }
+}
